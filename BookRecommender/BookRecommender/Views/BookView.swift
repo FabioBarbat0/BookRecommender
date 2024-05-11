@@ -15,8 +15,10 @@ struct BookView: View {
             
             VStack{
                 AsyncImage(url: URL(string: "https://www.ibs.it/images/9788868368593_0_536_0_75.jpg")) { image in
-                    image.resizable()
+                    image
+                        .resizable()
                         .scaledToFit()
+                        .clipShape(.rect(cornerRadius: 8))
                 }placeholder: {
                     ZStack{
                         Rectangle()
@@ -30,7 +32,7 @@ struct BookView: View {
 
                 }
                 .frame(width: 200, height: 250)
-                .clipShape(.rect(cornerRadius: 3))
+                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 
                 Text(book.name)
                     .fontWeight(.medium)
