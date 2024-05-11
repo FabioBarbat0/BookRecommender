@@ -6,16 +6,24 @@
 //
 
 import SwiftUI
+import Combine
+import CoreML
+
 
 struct ContentView: View {
+    @ObservedObject var topRecommendations = Recommender()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List(topRecommendations.books) { book in
+                VStack (alignment: .leading) {
+                    Text(book.name)
+                    Text("\(book.score)")
+                    .font(.system(size: 14))
+                    .foregroundColor(Color.gray)
+                }
+            }.navigationBarTitle("CoreMLRecommender", displayMode: .inline)
         }
-        .padding()
     }
 }
 
