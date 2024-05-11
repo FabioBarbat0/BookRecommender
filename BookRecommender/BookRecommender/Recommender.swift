@@ -6,6 +6,9 @@
 //
 
 import Foundation
+//import Combine
+import CoreML
+
 public class Recommender: ObservableObject {
     
     @Published var books = [Book]()

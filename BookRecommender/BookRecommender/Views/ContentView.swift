@@ -6,9 +6,6 @@
 //
 
 import SwiftUI
-import Combine
-import CoreML
-
 
 struct ContentView: View {
     @ObservedObject var topRecommendations = Recommender()
@@ -22,7 +19,7 @@ struct ContentView: View {
                     .font(.system(size: 14))
                     .foregroundColor(Color.gray)
                 }
-            }.navigationBarTitle("CoreMLRecommender", displayMode: .inline)
+            }
         }
     }
 }
