@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RecommendView.swift
 //  BookRecommender
 //
 //  Created by Fabio Barbato on 30/04/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RecommendView: View {
     @ObservedObject var topRecommendations = Recommender()
     
     var books: [Book]
@@ -40,5 +40,5 @@ struct ContentView: View {
 }
 
 #Preview {
-        ContentView(books: bookDB)
+        RecommendView(books: bookDB)
     }

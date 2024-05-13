@@ -12,6 +12,7 @@ import Foundation
 struct BookView: View {
     
     var book:Book
+    @State var rating = 0
     
     var body: some View {
             
@@ -40,6 +41,8 @@ struct BookView: View {
                 Text(book.name)
                     .fontWeight(.medium)
                     .padding(.bottom, 5)
+                
+                RatingView(rating: $rating)
             }
     }
 }
