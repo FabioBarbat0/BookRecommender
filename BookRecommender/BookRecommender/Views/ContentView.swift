@@ -21,8 +21,8 @@ struct ContentView: View {
         ScrollView {
             LazyVGrid(columns: colums, spacing: 44) {
                 
-                ForEach( books, id: \.self){ book in
-                    BookView(book: book)
+                ForEach( books, id: \.self){ bookItem in
+                    BookView(book: bookItem)
                 }
             }
         }
@@ -40,5 +40,5 @@ struct ContentView: View {
 }
 
 #Preview {
-        ContentView(books: books)
+        ContentView(books: bookDB)
     }

@@ -10,6 +10,7 @@ import Foundation
 
 
 struct BookView: View {
+    
     var book:Book
     
     var body: some View {
