@@ -12,7 +12,7 @@ import Foundation
 struct BookView: View {
     
     var book:Book
-    @State var rating = 0
+    @State private var rating = 0
     
     var body: some View {
             
