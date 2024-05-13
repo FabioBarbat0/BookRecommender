@@ -12,6 +12,7 @@
 		2502FE282BE16104001A356A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2502FE272BE16104001A356A /* Assets.xcassets */; };
 		2502FE2B2BE16104001A356A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2502FE2A2BE16104001A356A /* Preview Assets.xcassets */; };
 		25D371712BEF858B00CF999A /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D371702BEF858B00CF999A /* BookView.swift */; };
+		25D371752BF28D0D00CF999A /* BookDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D371742BF28D0D00CF999A /* BookDB.swift */; };
 		25D5C9C72BEE8009006B2529 /* BookRecommender.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 25D5C9C62BEE8009006B2529 /* BookRecommender.mlmodel */; };
 		25D5C9C92BEF5DB2006B2529 /* Recommender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D5C9C82BEF5DB2006B2529 /* Recommender.swift */; };
 		25D5C9CB2BEF5EAD006B2529 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D5C9CA2BEF5EAD006B2529 /* Book.swift */; };
@@ -24,6 +25,7 @@
 		2502FE272BE16104001A356A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2502FE2A2BE16104001A356A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		25D371702BEF858B00CF999A /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		25D371742BF28D0D00CF999A /* BookDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDB.swift; sourceTree = "<group>"; };
 		25D5C9C62BEE8009006B2529 /* BookRecommender.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BookRecommender.mlmodel; sourceTree = "<group>"; };
 		25D5C9C82BEF5DB2006B2529 /* Recommender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommender.swift; sourceTree = "<group>"; };
 		25D5C9CA2BEF5EAD006B2529 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -59,13 +61,13 @@
 		2502FE222BE16104001A356A /* BookRecommender */ = {
 			isa = PBXGroup;
 			children = (
+				2502FE292BE16104001A356A /* Preview Content */,
+				2502FE272BE16104001A356A /* Assets.xcassets */,
 				25D5C9C62BEE8009006B2529 /* BookRecommender.mlmodel */,
 				2502FE232BE16104001A356A /* BookRecommenderApp.swift */,
-				2502FE272BE16104001A356A /* Assets.xcassets */,
-				2502FE292BE16104001A356A /* Preview Content */,
-				25D5C9C82BEF5DB2006B2529 /* Recommender.swift */,
-				25D5C9CA2BEF5EAD006B2529 /* Book.swift */,
+				25D371732BF28CEE00CF999A /* Model */,
 				25D3716D2BEF852100CF999A /* Views */,
+				25D371762BF2A96200CF999A /* ViewModel */,
 			);
 			path = BookRecommender;
 			sourceTree = "<group>";
@@ -85,6 +87,23 @@
 				25D371702BEF858B00CF999A /* BookView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		25D371732BF28CEE00CF999A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25D371742BF28D0D00CF999A /* BookDB.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		25D371762BF2A96200CF999A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25D5C9CA2BEF5EAD006B2529 /* Book.swift */,
+				25D5C9C82BEF5DB2006B2529 /* Recommender.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +134,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					2502FE1F2BE16104001A356A = {
 						CreatedOnToolsVersion = 14.1;
@@ -159,6 +178,7 @@
 			files = (
 				25D5C9C72BEE8009006B2529 /* BookRecommender.mlmodel in Sources */,
 				25D5C9C92BEF5DB2006B2529 /* Recommender.swift in Sources */,
+				25D371752BF28D0D00CF999A /* BookDB.swift in Sources */,
 				2502FE262BE16104001A356A /* ContentView.swift in Sources */,
 				25D5C9CB2BEF5EAD006B2529 /* Book.swift in Sources */,
 				25D371712BEF858B00CF999A /* BookView.swift in Sources */,
@@ -173,6 +193,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -205,6 +226,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -233,6 +255,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -265,6 +288,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

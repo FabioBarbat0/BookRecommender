@@ -10,8 +10,23 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var topRecommendations = Recommender()
     
+    var books: [Book]
+    
+    let colums = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    ]
+    
     var body: some View {
-        NavigationView {
+        ScrollView {
+            LazyVGrid(columns: colums, spacing: 44) {
+                
+                ForEach( books, id: \.self){ book in
+                    BookView(book: book)
+                }
+            }
+        }
+       /* NavigationView {
             List(topRecommendations.books) { book in
                 VStack (alignment: .leading) {
                     Text(book.name)
@@ -20,12 +35,10 @@ struct ContentView: View {
                     .foregroundColor(Color.gray)
                 }
             }
-        }
+        }*/
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+#Preview {
+        ContentView(books: books)
     }
-}

@@ -28,8 +28,7 @@ public class Recommender: ObservableObject {
             var tempBooks = [Book]()
             
             for str in result.recommendations{
-                let score = result.scores[str] ?? 0
-                tempBooks.append(Book(name: "\(str)", score: score))
+                tempBooks.append(Book(cover: "", name: "\(str)"))
             }
             self.books = tempBooks
             

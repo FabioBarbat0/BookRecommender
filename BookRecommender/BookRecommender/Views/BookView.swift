@@ -8,13 +8,15 @@
 import SwiftUI
 import Foundation
 
-var book: Book = Book(name: "La ragazza del treno", score: 3.0)
 
 struct BookView: View {
+    var book:Book
+    
     var body: some View {
             
+        
             VStack{
-                AsyncImage(url: URL(string: "https://www.ibs.it/images/9788868368593_0_536_0_75.jpg")) { image in
+                AsyncImage(url: URL(string: book.cover!)) { image in
                     image
                         .resizable()
                         .scaledToFit()
@@ -42,5 +44,5 @@ struct BookView: View {
 }
 
 #Preview {
-    BookView()
+    BookView(book: Book(cover: "https://www.ibs.it/images/9788868368593_0_536_0_75.jpg", ISBN: "9788858513477", name: "La ragazza del treno"))
 }

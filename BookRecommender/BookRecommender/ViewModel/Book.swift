@@ -6,9 +6,11 @@
 //
 
 import Foundation
-struct Book: Identifiable {
+struct Book: Identifiable,Hashable {
     public var id = UUID()
+    public var cover: String?
+    public var ISBN: String?
     public var name: String
-    public var score: Double
+    public var score: Double?
     
 }
