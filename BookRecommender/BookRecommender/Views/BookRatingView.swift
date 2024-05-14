@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BookRatingView: View {
     var books: [Book]
+    @ObservedObject var topRecommendations = Recommender()
     
     let colums = [
         GridItem(.flexible()),
@@ -17,18 +18,16 @@ struct BookRatingView: View {
     
     var body: some View {
         NavigationStack{
-            ScrollView {
-                LazyVGrid(columns: colums, spacing: 44) {
-                    
-                    ForEach( books, id: \.self){ bookItem in
-                        BookView(book: bookItem)
+            VStack{
+                ScrollView {
+                    LazyVGrid(columns: colums, spacing: 44) {
+                        
+                        ForEach( books, id: \.self){ bookItem in
+                            BookView(book: bookItem)
+                        }
                     }
                 }
-            }
-            NavigationLink(destination: RecommendView(books: books), label: {
-                Button(action: {
-                    print("Tapped")
-                }, label: {
+                NavigationLink(destination: RecommendView(topRecommendations: topRecommendations, books: books), label: {
                     Text("Continue")
                         .padding()
                         .font(.title3)
@@ -36,7 +35,10 @@ struct BookRatingView: View {
                         .background (Color("AccentColor"))
                         .clipShape(.rect(cornerRadius: 8))
                 })
-            })
+                .simultaneousGesture(TapGesture().onEnded {
+                    topRecommendations.load()
+                })
+            }
         }
     }
 }

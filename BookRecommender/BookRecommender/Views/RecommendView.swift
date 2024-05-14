@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecommendView: View {
-    @ObservedObject var topRecommendations = Recommender()
+    @ObservedObject var topRecommendations: Recommender
     
     var books: [Book]
     
@@ -21,9 +21,9 @@ struct RecommendView: View {
 //        ScrollView {
 //            LazyVGrid(columns: colums, spacing: 44) {
 //                
-////                ForEach( books, id: \.self){ bookItem in
-////                    BookView(book: bookItem)
-////                }
+//                ForEach( books, id: \.self){ bookItem in
+//                    BookView(book: bookItem)
+//                }
 //            }
 //        }
         NavigationView {
@@ -36,6 +36,6 @@ struct RecommendView: View {
     }
 }
 
-#Preview {
-        RecommendView(books: bookDB)
-    }
+//#Preview {
+//    RecommendView(topRecommendations: , books: bookDB)
+//    }

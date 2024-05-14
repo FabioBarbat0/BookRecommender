@@ -42,7 +42,7 @@ struct BookView: View {
                     .fontWeight(.medium)
                     .padding(.bottom, 5)
                 
-                RatingView(rating: $rating, bookRated: book.name)
+                RatingView(rating: $rating, bookRatedName: book.name)
             }
     }
 }
