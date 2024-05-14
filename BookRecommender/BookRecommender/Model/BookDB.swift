@@ -16,3 +16,7 @@ let bookDB = [
     Book(cover: "https://www.ibs.it/images/9788850246731_0_536_0_75.jpg", ISBN: "9788850250998", name: "Altered Carbon"),
     Book(cover: "https://www.ibs.it/images/9788834739679_0_536_0_75.jpg", ISBN: "9788834721285", name: "Dune")
 ]
+
+func findBook(byName name: String) -> Book? {
+    return bookDB.first { $0.name.lowercased() == name.lowercased() }
+}

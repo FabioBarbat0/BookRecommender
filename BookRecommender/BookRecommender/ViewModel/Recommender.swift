@@ -28,12 +28,15 @@ public class Recommender: ObservableObject {
             
             let result = try recommender.prediction(input: input)
             var tempBooks = [Book]()
-            
+            var temp: Book
+
             for str in result.recommendations{
-                tempBooks.append(Book(name: "\(str)"))
+                temp = findBook(byName: str) ?? Book(name: str)
+                tempBooks.append(Book(cover:temp.cover,ISBN: temp.ISBN,name: temp.name))
             }
             self.books = tempBooks
             print(ratings)
+            print(books)
         }catch(let error){
             print("error is \(error.localizedDescription)")
         }

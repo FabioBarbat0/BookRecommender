@@ -18,7 +18,7 @@ struct BookView: View {
             
         
             VStack{
-                AsyncImage(url: URL(string: book.cover!)) { image in
+                AsyncImage(url: URL(string: book.cover ?? "")) { image in
                     image
                         .resizable()
                         .scaledToFit()
