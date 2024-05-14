@@ -16,13 +16,27 @@ struct BookRatingView: View {
     ]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: colums, spacing: 44) {
-                
-                ForEach( books, id: \.self){ bookItem in
-                    BookView(book: bookItem)
+        NavigationStack{
+            ScrollView {
+                LazyVGrid(columns: colums, spacing: 44) {
+                    
+                    ForEach( books, id: \.self){ bookItem in
+                        BookView(book: bookItem)
+                    }
                 }
             }
+            NavigationLink(destination: RecommendView(books: books), label: {
+                Button(action: {
+                    print("Tapped")
+                }, label: {
+                    Text("Continue")
+                        .padding()
+                        .font(.title3)
+                        .foregroundStyle (.white)
+                        .background (Color("AccentColor"))
+                        .clipShape(.rect(cornerRadius: 8))
+                })
+            })
         }
     }
 }

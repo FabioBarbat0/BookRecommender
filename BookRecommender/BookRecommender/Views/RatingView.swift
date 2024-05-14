@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RatingView: View {
     @Binding var rating: Int
+    var bookRated: String
 
     var label = ""
 
@@ -29,6 +30,7 @@ struct RatingView: View {
             ForEach(1..<maximumRating + 1, id: \.self) { number in
                 Button {
                     rating = number
+                    print("\(bookRated) \(number)")
                 } label: {
                     image(for: number)
                         .foregroundStyle(number > rating ? offColor : onColor)
@@ -49,5 +51,5 @@ struct RatingView: View {
 
 
 #Preview {
-    RatingView(rating: .constant(4))
+    RatingView(rating: .constant(4), bookRated: "La ragazza del treno")
 }

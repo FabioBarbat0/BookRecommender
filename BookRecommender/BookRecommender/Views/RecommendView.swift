@@ -18,24 +18,21 @@ struct RecommendView: View {
     ]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: colums, spacing: 44) {
-                
-                ForEach( books, id: \.self){ bookItem in
-                    BookView(book: bookItem)
-                }
-            }
-        }
-       /* NavigationView {
+//        ScrollView {
+//            LazyVGrid(columns: colums, spacing: 44) {
+//                
+////                ForEach( books, id: \.self){ bookItem in
+////                    BookView(book: bookItem)
+////                }
+//            }
+//        }
+        NavigationView {
             List(topRecommendations.books) { book in
                 VStack (alignment: .leading) {
                     Text(book.name)
-                    Text("\(book.score)")
-                    .font(.system(size: 14))
-                    .foregroundColor(Color.gray)
                 }
             }
-        }*/
+        }
     }
 }
 
