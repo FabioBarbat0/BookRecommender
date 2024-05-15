@@ -15,15 +15,15 @@ struct BookViewJSON: View {
             VStack(alignment: .leading) {
                 Text("Title: \(book.volumeInfo.title)")
                 Text("Authors: \(book.volumeInfo.authors.joined(separator: ", "))")
-                Text("Publisher: \(book.volumeInfo.publisher)")
+                //Text("Publisher: \(book.volumeInfo.publisher)")
             }
         }
-        .task {
-            await loadData()
+        .onAppear() {
+            loadData()
         }
     }
     
-    func loadData() async {
+    func loadData() {
         guard let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:9788858818961") else {
             print("Invalid URL")
             return
