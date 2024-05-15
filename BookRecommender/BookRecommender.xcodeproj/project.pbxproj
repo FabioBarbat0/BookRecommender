@@ -98,6 +98,7 @@
 		25D371732BF28CEE00CF999A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				25D5C9CA2BEF5EAD006B2529 /* Book.swift */,
 				25D371742BF28D0D00CF999A /* BookDB.swift */,
 			);
 			path = Model;
@@ -106,7 +107,6 @@
 		25D371762BF2A96200CF999A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				25D5C9CA2BEF5EAD006B2529 /* Book.swift */,
 				25D5C9C82BEF5DB2006B2529 /* Recommender.swift */,
 			);
 			path = ViewModel;
