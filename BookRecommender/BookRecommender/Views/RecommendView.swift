@@ -21,8 +21,9 @@ struct RecommendView: View {
         ScrollView {
             LazyVGrid(columns: colums, spacing: 44) {
                 
-                ForEach( topRecommendations.books, id: \.self){ bookItem in
-                    BookView(book: bookItem, isRated: true)
+                ForEach( topRecommendations.books.indices, id: \.self){ index in
+                    let bookItem = topRecommendations.books[index]
+                    BookView(book: bookItem, isRated: true, rank: index+1)
                 }
             }
         }

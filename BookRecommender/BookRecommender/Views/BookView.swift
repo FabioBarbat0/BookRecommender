@@ -14,6 +14,7 @@ struct BookView: View {
     var book:Book
     @State private var rating = 0
     var isRated:Bool
+    var rank: Int?
     
     var body: some View {
             
@@ -39,9 +40,15 @@ struct BookView: View {
                 .frame(width: 200, height: 250)
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 
-                Text(book.name)
-                    .fontWeight(.medium)
-                    .padding(.bottom, 5)
+                if !isRated{
+                    Text(book.name)
+                        .fontWeight(.medium)
+                        .padding(.bottom, 5)
+                }else{
+                    Text("\(rank.unsafelyUnwrapped). \(book.name)")
+                        .fontWeight(.medium)
+                        .padding(.bottom, 5)
+                }
                 
                 if !isRated{
                     RatingView(rating: $rating, bookRatedName: book.name)
@@ -51,5 +58,5 @@ struct BookView: View {
 }
 
 #Preview {
-    BookView(book: Book(cover: "https://www.ibs.it/images/9788868368593_0_536_0_75.jpg", ISBN: "9788858513477", name: "La ragazza del treno"), isRated: false)
+    BookView(book: Book(cover: "https://www.ibs.it/images/9788868368593_0_536_0_75.jpg", ISBN: "9788858513477", name: "La ragazza del treno"), isRated: false, rank: 1)
 }
