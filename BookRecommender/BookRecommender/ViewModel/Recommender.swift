@@ -14,17 +14,12 @@ public class Recommender: ObservableObject {
     
     @Published var books = [Book]()
 
-    init(){
-        //load()
-        print(ratings)
-    }
     
     func load() {
         do{
             let recommender = BookRecommender()
             
-            //var ratings : [String: Double] = ["Dune": 3.0, "Altered Carbon": 4]
-            let input = BookRecommenderInput(items: ratings, k: 10, restrict_: [], exclude: [])
+            let input = BookRecommenderInput(items: ratings, k: 10)
             
             let result = try recommender.prediction(input: input)
             var tempBooks = [Book]()
@@ -35,8 +30,8 @@ public class Recommender: ObservableObject {
                 tempBooks.append(Book(cover:temp.cover,ISBN: temp.ISBN,name: temp.name))
             }
             self.books = tempBooks
-            print(ratings)
-            print(books)
+//            print(ratings)
+//            print(books)
         }catch(let error){
             print("error is \(error.localizedDescription)")
         }
