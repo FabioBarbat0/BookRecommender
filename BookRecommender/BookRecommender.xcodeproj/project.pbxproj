@@ -18,6 +18,8 @@
 		25D5C9C72BEE8009006B2529 /* BookRecommender.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 25D5C9C62BEE8009006B2529 /* BookRecommender.mlmodel */; };
 		25D5C9C92BEF5DB2006B2529 /* Recommender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D5C9C82BEF5DB2006B2529 /* Recommender.swift */; };
 		25D5C9CB2BEF5EAD006B2529 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D5C9CA2BEF5EAD006B2529 /* Book.swift */; };
+		25F393F92BF52FD200502010 /* BookJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F393F82BF52FD200502010 /* BookJSON.swift */; };
+		25F393FB2BF5336300502010 /* BookViewJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F393FA2BF5336300502010 /* BookViewJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		25D5C9C62BEE8009006B2529 /* BookRecommender.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BookRecommender.mlmodel; sourceTree = "<group>"; };
 		25D5C9C82BEF5DB2006B2529 /* Recommender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommender.swift; sourceTree = "<group>"; };
 		25D5C9CA2BEF5EAD006B2529 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		25F393F82BF52FD200502010 /* BookJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookJSON.swift; sourceTree = "<group>"; };
+		25F393FA2BF5336300502010 /* BookViewJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				25D371702BEF858B00CF999A /* BookView.swift */,
 				25D371772BF2AD9400CF999A /* RatingView.swift */,
 				2502FE252BE16104001A356A /* RecommendView.swift */,
+				25F393FA2BF5336300502010 /* BookViewJSON.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 			children = (
 				25D5C9CA2BEF5EAD006B2529 /* Book.swift */,
 				25D371742BF28D0D00CF999A /* BookDB.swift */,
+				25F393F82BF52FD200502010 /* BookJSON.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,9 +191,11 @@
 				25D5C9C72BEE8009006B2529 /* BookRecommender.mlmodel in Sources */,
 				25D5C9C92BEF5DB2006B2529 /* Recommender.swift in Sources */,
 				25D371752BF28D0D00CF999A /* BookDB.swift in Sources */,
+				25F393FB2BF5336300502010 /* BookViewJSON.swift in Sources */,
 				25D3717A2BF2B1D700CF999A /* BookRatingView.swift in Sources */,
 				25D371782BF2AD9400CF999A /* RatingView.swift in Sources */,
 				2502FE262BE16104001A356A /* RecommendView.swift in Sources */,
+				25F393F92BF52FD200502010 /* BookJSON.swift in Sources */,
 				25D5C9CB2BEF5EAD006B2529 /* Book.swift in Sources */,
 				25D371712BEF858B00CF999A /* BookView.swift in Sources */,
 				2502FE242BE16104001A356A /* BookRecommenderApp.swift in Sources */,
