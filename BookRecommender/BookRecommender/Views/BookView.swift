@@ -13,6 +13,7 @@ struct BookView: View {
     
     var book:Book
     @State private var rating = 0
+    var isRated:Bool
     
     var body: some View {
             
@@ -42,11 +43,13 @@ struct BookView: View {
                     .fontWeight(.medium)
                     .padding(.bottom, 5)
                 
-                RatingView(rating: $rating, bookRatedName: book.name)
+                if !isRated{
+                    RatingView(rating: $rating, bookRatedName: book.name)
+                }
             }
     }
 }
 
 #Preview {
-    BookView(book: Book(cover: "https://www.ibs.it/images/9788868368593_0_536_0_75.jpg", ISBN: "9788858513477", name: "La ragazza del treno"))
+    BookView(book: Book(cover: "https://www.ibs.it/images/9788868368593_0_536_0_75.jpg", ISBN: "9788858513477", name: "La ragazza del treno"), isRated: false)
 }

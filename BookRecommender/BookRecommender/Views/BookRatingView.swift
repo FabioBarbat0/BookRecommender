@@ -23,7 +23,7 @@ struct BookRatingView: View {
                     LazyVGrid(columns: colums, spacing: 44) {
                         
                         ForEach( books, id: \.self){ bookItem in
-                            BookView(book: bookItem)
+                            BookView(book: bookItem, isRated: false)
                         }
                     }
                 }

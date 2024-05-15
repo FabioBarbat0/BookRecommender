@@ -22,17 +22,10 @@ struct RecommendView: View {
             LazyVGrid(columns: colums, spacing: 44) {
                 
                 ForEach( topRecommendations.books, id: \.self){ bookItem in
-                    BookView(book: bookItem)
+                    BookView(book: bookItem, isRated: true)
                 }
             }
         }
-//        NavigationView {
-//            List(topRecommendations.books) { book in
-//                VStack (alignment: .leading) {
-//                    Text(book.name)
-//                }
-//            }
-//        }
     }
 }
 
