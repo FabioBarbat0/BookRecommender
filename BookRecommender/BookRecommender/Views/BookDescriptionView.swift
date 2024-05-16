@@ -33,7 +33,8 @@ struct BookDescriptionView: View {
                     
                 }.frame(width: 300)
                     .padding()
-                Link(destination: URL(string: webReader!)!) {
+                
+                Link(destination: URL(string: "https://www.apple.com")!) {
                     HStack{
                         Text("Preview")
                             .foregroundStyle(.white)
@@ -43,6 +44,7 @@ struct BookDescriptionView: View {
                     .frame(width: 150,height:50)
                     .background(Color("AccentColor"))
                 }.clipShape(.rect(cornerRadius: 10))
+
                 
 //                Button(action: {
 //                    print("ciao \(webReader)")
