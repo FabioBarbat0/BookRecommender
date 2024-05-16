@@ -30,8 +30,7 @@ public class Recommender: ObservableObject {
                 tempBooks.append(Book(cover:temp.cover,ISBN: temp.ISBN,name: temp.name))
             }
             self.books = tempBooks
-//            print(ratings)
-//            print(books)
+
         }catch(let error){
             print("error is \(error.localizedDescription)")
         }

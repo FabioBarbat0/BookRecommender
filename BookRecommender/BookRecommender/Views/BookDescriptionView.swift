@@ -34,29 +34,29 @@ struct BookDescriptionView: View {
                 }.frame(width: 300)
                     .padding()
                 
-                Link(destination: URL(string: "https://www.apple.com")!) {
+                if let webReaderURL = URL(string: webReader ?? "") {
+                    Link(destination: webReaderURL) {
+                        HStack{
+                            Text("Preview")
+                                .foregroundStyle(.white)
+                            Image(systemName: "book")
+                                .foregroundStyle(.white)
+                        }
+                        .frame(width: 150,height:50)
+                        .background(Color("AccentColor"))
+                    }.clipShape(.rect(cornerRadius: 10))
+                } else {
                     HStack{
-                        Text("Preview")
+                        Text("Preview \nunavailable")
                             .foregroundStyle(.white)
-                        Image(systemName: "book")
-                            .foregroundStyle(.white)
+                            .multilineTextAlignment(.center)
                     }
                     .frame(width: 150,height:50)
-                    .background(Color("AccentColor"))
-                }.clipShape(.rect(cornerRadius: 10))
+                    .background(.gray)
+                    .clipShape(.rect(cornerRadius: 10))
 
-                
-//                Button(action: {
-//                    print("ciao \(webReader)")
-//                }, label: {
-//                    HStack{
-//                        Text("Preview")
-//                            .foregroundStyle(.white)
-//                        Image(systemName: "book")
-//                            .foregroundStyle(.white)
-//                    }.frame(width: 150,height:50)
-//                        .background(Color("AccentColor"))
-//                })             .clipShape(.rect(cornerRadius: 10))
+                }
+
                 Divider()
                 Text("Description")
                     .bold()

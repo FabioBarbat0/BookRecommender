@@ -42,35 +42,6 @@ struct ImageLinks: Codable {
 }
 
 
-//func recoverBooks(isbnList: [String])->[Book]{
-//    var bookList = [Book]()
-//    for isbn in isbnList {
-//        loadData(isbn: isbn){book in
-//            bookList.append(book)
-//        }
-//    }
-//    print(bookList)
-//    return bookList
-//}
-
-//func recoverBooks(isbnList: [String], completion: @escaping ([Book]) -> Void) {
-//    var bookList = [Book]()
-//    let dispatchGroup = DispatchGroup() // Creiamo un DispatchGroup
-//    
-//    for isbn in isbnList {
-//        dispatchGroup.enter() // Entriamo nel DispatchGroup prima di avviare la richiesta API
-//        loadData(isbn: isbn) { book in
-//            bookList.append(book)
-//            dispatchGroup.leave() // Usciamo dal DispatchGroup quando la richiesta API è completata
-//        }
-//    }
-//    
-//    dispatchGroup.notify(queue: .main) {
-//        // Tutte le richieste API sono state completate
-//        // Ora possiamo restituire bookList
-//        completion(bookList)
-//    }
-//}
 
 func loadData(isbn: String, completion: @escaping ([String?]) -> Void) {
     guard let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:\(isbn)") else {
@@ -102,39 +73,5 @@ func loadData(isbn: String, completion: @escaping ([String?]) -> Void) {
         }
     }.resume()
 }
-
-//func loadData(isbn: String) -> Book {
-//    var bookFetched = Book(name: "")
-//    guard let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:\(isbn)") else {
-//        print("Invalid URL")
-//        return Book(name: "")
-//    }
-//    print("Requesting URL:", url)
-//    
-//    URLSession.shared.dataTask(with: url) { data, response, error in
-//        guard let data = data, error == nil else {
-//            print("Error: \(error?.localizedDescription ?? "Unknown error")")
-//            return
-//        }
-//        
-//        do {
-//            let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
-//            print("Response JSON:", responseJSON)
-//            
-//            let decoder = JSONDecoder()
-//            let decodedData = try decoder.decode(BookJSON.self, from: data)
-//            DispatchQueue.main.async {
-//                var temp_books: [Item]
-//                temp_books = decodedData.items
-//                bookFetched = Book(cover: temp_books.first?.volumeInfo.imageLinks.thumbnail,
-//                                   ISBN: isbn,
-//                                   name: temp_books.first!.volumeInfo.title)
-//            }
-//        } catch {
-//            print("Error decoding JSON: \(error)")
-//        }
-//    }.resume()
-//    return bookFetched
-//}
 
 
