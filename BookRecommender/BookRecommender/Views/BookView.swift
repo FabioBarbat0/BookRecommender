@@ -18,7 +18,38 @@ struct BookView: View {
     
     var body: some View {
             
-        
+        if isRated{
+            NavigationLink(destination: BookDescriptionView(isbn: book.ISBN!,cover: book.cover!)) {
+                VStack{
+                    AsyncImage(url: URL(string: book.cover ?? "")) { image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(.rect(cornerRadius: 8))
+                    }placeholder: {
+                        ZStack{
+                            Rectangle()
+                                .fill(.gray)
+                                .frame(width: 160)
+                            Text("Cover \nunavailable")
+                                .frame(width:100,
+                                       alignment: .center)
+                                .font(.title3)
+                        }
+
+                    }
+                    .frame(width: 200, height: 250)
+                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    
+                    Text("\(rank.unsafelyUnwrapped). \(book.name)")
+                        .fontWeight(.medium)
+                        .padding(.bottom, 5)
+                        .foregroundStyle(Color("ForegroundFont"))
+
+                }
+
+            }
+        }else{
             VStack{
                 AsyncImage(url: URL(string: book.cover ?? "")) { image in
                     image
@@ -39,24 +70,17 @@ struct BookView: View {
                 }
                 .frame(width: 200, height: 250)
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                
-                if !isRated{
-                    Text(book.name)
-                        .fontWeight(.medium)
-                        .padding(.bottom, 5)
-                }else{
-                    Text("\(rank.unsafelyUnwrapped). \(book.name)")
-                        .fontWeight(.medium)
-                        .padding(.bottom, 5)
-                }
-                
-                if !isRated{
-                    RatingView(rating: $rating, bookRatedName: book.name)
-                }
+                Text(book.name)
+                    .fontWeight(.medium)
+                    .padding(.bottom, 5)
+                RatingView(rating: $rating, bookRatedName: book.name)
             }
+
+
+        }
     }
 }
 
 #Preview {
-    BookView(book: Book(cover: "https://www.ibs.it/images/9788868368593_0_536_0_75.jpg", ISBN: "9788858513477", name: "La ragazza del treno"), isRated: false, rank: 1)
+    BookView(book: Book(cover: "https://www.ibs.it/images/9788868368593_0_536_0_75.jpg", ISBN: "9788858513477", name: "La ragazza del treno"), isRated: true, rank: 1)
 }

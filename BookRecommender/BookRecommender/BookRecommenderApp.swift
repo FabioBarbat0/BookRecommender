@@ -11,8 +11,7 @@ import SwiftUI
 struct BookRecommenderApp: App {
     var body: some Scene {
         WindowGroup {
-            //BookRatingView(books: bookDB)
-            BookViewJSON()
+            BookRatingView(books: bookDB)
         }
     }
 }

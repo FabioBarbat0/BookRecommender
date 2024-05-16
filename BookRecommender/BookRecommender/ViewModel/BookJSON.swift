@@ -53,29 +53,29 @@ struct ImageLinks: Codable {
 //    return bookList
 //}
 
-func recoverBooks(isbnList: [String], completion: @escaping ([Book]) -> Void) {
-    var bookList = [Book]()
-    let dispatchGroup = DispatchGroup() // Creiamo un DispatchGroup
-    
-    for isbn in isbnList {
-        dispatchGroup.enter() // Entriamo nel DispatchGroup prima di avviare la richiesta API
-        loadData(isbn: isbn) { book in
-            bookList.append(book)
-            dispatchGroup.leave() // Usciamo dal DispatchGroup quando la richiesta API è completata
-        }
-    }
-    
-    dispatchGroup.notify(queue: .main) {
-        // Tutte le richieste API sono state completate
-        // Ora possiamo restituire bookList
-        completion(bookList)
-    }
-}
+//func recoverBooks(isbnList: [String], completion: @escaping ([Book]) -> Void) {
+//    var bookList = [Book]()
+//    let dispatchGroup = DispatchGroup() // Creiamo un DispatchGroup
+//    
+//    for isbn in isbnList {
+//        dispatchGroup.enter() // Entriamo nel DispatchGroup prima di avviare la richiesta API
+//        loadData(isbn: isbn) { book in
+//            bookList.append(book)
+//            dispatchGroup.leave() // Usciamo dal DispatchGroup quando la richiesta API è completata
+//        }
+//    }
+//    
+//    dispatchGroup.notify(queue: .main) {
+//        // Tutte le richieste API sono state completate
+//        // Ora possiamo restituire bookList
+//        completion(bookList)
+//    }
+//}
 
-func loadData(isbn: String, completion: @escaping (Book) -> Void) {
+func loadData(isbn: String, completion: @escaping ([String?]) -> Void) {
     guard let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:\(isbn)") else {
         print("Invalid URL")
-        completion(Book(name: ""))
+        completion([])
         return
     }
     print("Requesting URL:", url)
@@ -83,7 +83,7 @@ func loadData(isbn: String, completion: @escaping (Book) -> Void) {
     URLSession.shared.dataTask(with: url) { data, response, error in
         guard let data = data, error == nil else {
             print("Error: \(error?.localizedDescription ?? "Unknown error")")
-            completion(Book(name: ""))
+            completion([])
             return
         }
         
@@ -91,16 +91,14 @@ func loadData(isbn: String, completion: @escaping (Book) -> Void) {
             let decoder = JSONDecoder()
             let decodedData = try decoder.decode(BookJSON.self, from: data)
             if let firstItem = decodedData.items.first {
-                let book = Book(cover: firstItem.volumeInfo.imageLinks.thumbnail,
-                                ISBN: isbn,
-                                name: firstItem.volumeInfo.title)
-                completion(book)
+                let book_components = [firstItem.volumeInfo.description,firstItem.accessInfo.webReaderLink]
+                completion(book_components)
             } else {
-                completion(Book(name: ""))
+                print("Error loading book")
             }
         } catch {
             print("Error decoding JSON: \(error)")
-            completion(Book(name: ""))
+            completion([])
         }
     }.resume()
 }
