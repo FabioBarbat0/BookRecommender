@@ -1,0 +1,141 @@
+User_ID,Genre,ISBN,Name,Rating
+A,Thriller,9788858513477,La ragazza del treno,5
+A,Thriller,9788865830444,La terapia,5
+A,Thriller,9788835707431,La città di vapore,1
+A,Thriller,9788852087226,La donna alla finestra,2
+A,Thriller,9788830444799,La ragazza nella nebbia,1
+A,Thriller,9788830447257,Il maestro delle ombre,2
+A,Thriller,9788893427470,L'outsider,4
+A,Classic,9788858818961,Cime tempestose,5
+A,Classic,9788852072024,Il giocatore,5
+A,Classic,9788811131434,Guerra e pace,3
+A,Classic,9788807822278,Il grande Gatsby,5
+A,Sci-fi,9788834721285,Dune,4
+A,Sci-fi,9788822703507,La guerra dei mondi,2
+A,Sci-fi,9781473217379,Neuromancer,1
+A,Sci-fi,9788850250998,Altered Carbon,3
+A,Sci-fi,9788852084089,Il problema dei tre corpi,1
+A,Sci-fi,9788852075551,Le guide del tramonto,5
+B,Thriller,9788858513477,La ragazza del treno,2
+B,Thriller,9788835707431,La città di vapore,1
+B,Thriller,9788852087226,La donna alla finestra,5
+B,Thriller,9788852077128,La coppia della porta accanto,4
+B,Classic,9788854134072,Jane Eyre,4
+B,Classic,9788858818961,Cime tempestose,2
+B,Classic,9788893812672,Il maestro e Margherita,1
+B,Classic,9788852072024,Il giocatore,3
+B,Classic,9788807822278,Il grande Gatsby,2
+B,Classic,9788835709633,Il ritratto di Dorian Gray,2
+B,Classic,9788858618134,Il Rosso e il Nero,1
+B,Sci-fi,9788834721285,Dune,4
+B,Sci-fi,9788822703507,La guerra dei mondi,2
+B,Sci-fi,9788850250998,Altered Carbon,1
+B,Sci-fi,9788852084089,Il problema dei tre corpi,4
+B,Sci-fi,9788852075551,Le guide del tramonto,4
+C,Thriller,9788858513477,La ragazza del treno,2
+C,Thriller,9788865830444,La terapia,1
+C,Thriller,9788835707431,La città di vapore,4
+C,Thriller,9788852087226,La donna alla finestra,4
+C,Thriller,9788830447257,Il maestro delle ombre,4
+C,Thriller,9788893427470,L'outsider,4
+C,Classic,9788854134072,Jane Eyre,4
+C,Classic,9788858818961,Cime tempestose,1
+C,Classic,9788858618134,Il Rosso e il Nero,5
+C,Sci-fi,9788834721285,Dune,1
+C,Sci-fi,9788822703507,La guerra dei mondi,5
+C,Sci-fi,9788893812672,The Martian,1
+C,Sci-fi,9788851142056,Marte Rosso,3
+C,Sci-fi,9788850250998,Altered Carbon,4
+C,Sci-fi,9788852084089,Il problema dei tre corpi,3
+C,Sci-fi,9788852075551,Le guide del tramonto,5
+D,Thriller,9788858513477,La ragazza del treno,3
+D,Thriller,9788830444799,La ragazza nella nebbia,3
+D,Thriller,9788893427470,L'outsider,2
+D,Classic,9788858818961,Cime tempestose,5
+D,Classic,9788893812672,Il maestro e Margherita,5
+D,Classic,9788852072024,Il giocatore,3
+D,Classic,9788811131434,Guerra e pace,3
+D,Classic,9788807822278,Il grande Gatsby,4
+D,Classic,9788835709633,Il ritratto di Dorian Gray,4
+D,Classic,9788858618134,Il Rosso e il Nero,1
+D,Sci-fi,9788834721285,Dune,1
+D,Sci-fi,9788822703507,La guerra dei mondi,1
+D,Sci-fi,9788893812672,The Martian,2
+D,Sci-fi,9781473217379,Neuromancer,1
+D,Sci-fi,9788851142056,Marte Rosso,2
+D,Sci-fi,9788850250998,Altered Carbon,4
+D,Sci-fi,9788852084089,Il problema dei tre corpi,4
+D,Sci-fi,9788852075551,Le guide del tramonto,2
+E,Thriller,9788830444799,La ragazza nella nebbia,3
+E,Classic,9788854134072,Jane Eyre,5
+E,Classic,9788852072024,Il giocatore,3
+E,Classic,9788811131434,Guerra e pace,5
+E,Classic,9788835709633,Il ritratto di Dorian Gray,1
+E,Classic,9788858618134,Il Rosso e il Nero,3
+E,Sci-fi,9788834721285,Dune,4
+E,Sci-fi,9788822703507,La guerra dei mondi,4
+E,Sci-fi,9788893812672,The Martian,4
+E,Sci-fi,9788851142056,Marte Rosso,1
+E,Sci-fi,9788850250998,Altered Carbon,3
+E,Sci-fi,9788852084089,Il problema dei tre corpi,2
+E,Sci-fi,9788852075551,Le guide del tramonto,2
+F,Thriller,9788858513477,La ragazza del treno,3
+F,Thriller,9788865830444,La terapia,1
+F,Thriller,9788835707431,La città di vapore,2
+F,Thriller,9788852087226,La donna alla finestra,3
+F,Thriller,9788852077128,La coppia della porta accanto,3
+F,Thriller,9788893427470,L'outsider,2
+F,Classic,9788854134072,Jane Eyre,5
+F,Classic,9788852072024,Il giocatore,5
+F,Classic,9788811131434,Guerra e pace,1
+F,Classic,9788858618134,Il Rosso e il Nero,4
+F,Sci-fi,9788834721285,Dune,4
+F,Sci-fi,9788851142056,Marte Rosso,5
+F,Sci-fi,9788850250998,Altered Carbon,3
+F,Sci-fi,9788852084089,Il problema dei tre corpi,1
+G,Thriller,9788858513477,La ragazza del treno,2
+G,Thriller,9788865830444,La terapia,4
+G,Thriller,9788835707431,La città di vapore,1
+G,Thriller,9788852087226,La donna alla finestra,4
+G,Thriller,9788852077128,La coppia della porta accanto,2
+G,Thriller,9788830444799,La ragazza nella nebbia,1
+G,Classic,9788854134072,Jane Eyre,2
+G,Classic,9788858818961,Cime tempestose,3
+G,Classic,9788893812672,Il maestro e Margherita,1
+G,Classic,9788852072024,Il giocatore,5
+G,Classic,9788811131434,Guerra e pace,3
+G,Sci-fi,9788834721285,Dune,3
+G,Sci-fi,9788822703507,La guerra dei mondi,2
+G,Sci-fi,9788850250998,Altered Carbon,4
+G,Sci-fi,9788852084089,Il problema dei tre corpi,4
+G,Sci-fi,9788852075551,Le guide del tramonto,1
+H,Thriller,9788858513477,La ragazza del treno,4
+H,Thriller,9788865830444,La terapia,2
+H,Thriller,9788835707431,La città di vapore,1
+H,Thriller,9788852077128,La coppia della porta accanto,4
+H,Classic,9788858818961,Cime tempestose,4
+H,Classic,9788893812672,Il maestro e Margherita,5
+H,Classic,9788852072024,Il giocatore,5
+H,Classic,9788807822278,Il grande Gatsby,5
+H,Classic,9788835709633,Il ritratto di Dorian Gray,4
+H,Classic,9788858618134,Il Rosso e il Nero,5
+H,Sci-fi,9788834721285,Dune,2
+H,Sci-fi,9788893812672,The Martian,3
+H,Sci-fi,9781473217379,Neuromancer,1
+H,Sci-fi,9788851142056,Marte Rosso,3
+H,Sci-fi,9788852084089,Il problema dei tre corpi,1
+H,Sci-fi,9788852075551,Le guide del tramonto,3
+I,Thriller,9788858513477,La ragazza del treno,3
+I,Thriller,9788865830444,La terapia,2
+I,Thriller,9788835707431,La città di vapore,4
+I,Thriller,9788830444799,La ragazza nella nebbia,1
+I,Classic,9788893812672,Il maestro e Margherita,1
+I,Classic,9788852072024,Il giocatore,5
+I,Classic,9788811131434,Guerra e pace,1
+I,Classic,9788807822278,Il grande Gatsby,1
+I,Classic,9788835709633,Il ritratto di Dorian Gray,3
+I,Classic,9788858618134,Il Rosso e il Nero,1
+I,Sci-fi,9788893812672,The Martian,4
+I,Sci-fi,9788851142056,Marte Rosso,5
+I,Sci-fi,9788850250998,Altered Carbon,3
+I,Sci-fi,9788852075551,Le guide del tramonto,3
