@@ -18,7 +18,7 @@ The model was managed with CoreML. See **Recommender.swift** file for details.
 
 ### Google Books API
 To have the description of a book and (if it’s available) its preview, it was used Google Books API. With public searches it's not even need an API key.
-It was managed through the **BookJSON.swift** file. You can find the struct of the book to decode the JSON and its function.
+It was managed through the [BookJSON file](./BookRecommender/BookRecommender/ViewModel/BookJSON.swift). You can find the struct of the book to decode the JSON and its function.
 The function ```loadData(isbn: String)``` will send the request to Google Books' servers to fetch book informations. It will return its description and its webReader link to see the preview.
 
 
