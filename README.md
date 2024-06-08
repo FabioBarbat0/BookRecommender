@@ -13,7 +13,7 @@ of the book are among the user’s tastes.
 ### ML Model
 The machine learning model is based on collaborative filtering and it was created by CreateML, a powerful framework
 of Apple that make easy the creation of a trained model. In fact, in this case,
-it was enough to give a small dataset. Check it out [**Dataset file**](./BookRecommender/Dataset.csv).
+it was enough to give a small dataset. Check it out [**Dataset file**](./Dataset.csv).
 The model was managed with CoreML. See [**Recommender file**](./BookRecommender/BookRecommender/ViewModel/Recommender.swift) for details.
 
 ### Google Books API
