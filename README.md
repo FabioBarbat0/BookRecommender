@@ -1,7 +1,7 @@
 # BookRecommender
 
 BookRecommender is an iOS app, that helps book readers to choose their next
-books to read. Basically, this app has two main features:
+books to read. <br>Basically, this app has two main features:
 1. Based on the user’s tastes, the system will recommend other books
 through a trained machine learning model;
 2. The user can select the recommended books to see their description and
