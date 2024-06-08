@@ -12,20 +12,20 @@ of the book are among the user’s tastes.
 
 ### ML Model
 The machine learning model is based on collaborative filtering and it was created by CreateML, a powerful framework
-of Apple that make easy the creation of a trained model. In fact, in this case,
-it was enough to give a small dataset. Check it out [**Dataset file**](./Dataset.csv).
+of Apple that make easy the creation of a trained model. In this case,
+it was enough to give a small dataset. Check it out [**Dataset file**](./Dataset.csv).<br>
 The model was managed with CoreML. See [**Recommender file**](./BookRecommender/BookRecommender/ViewModel/Recommender.swift) for details.
 
 ### Google Books API
-To have the description of a book and (if it’s available) its preview, it was used Google Books API. With public searches it's not even need an API key.
-It was managed through the [**BookJSON file**](./BookRecommender/BookRecommender/ViewModel/BookJSON.swift). You can find the struct of the book to decode the JSON and its function.
+To have the description of a book and (if it’s available) its preview, it was used Google Books API. With public searches it's not even need an API key.<br>
+It was managed through the [**BookJSON file**](./BookRecommender/BookRecommender/ViewModel/BookJSON.swift). You can find the struct of the book to decode the JSON and its function.<br>
 The function ```loadData(isbn: String)``` will send the request to Google Books' servers to fetch book informations. It will return its description and its webReader link to see the preview.
 
 
 ### Database
 Since the dataset is small, the database containing the books informations
 (link of the cover image, ISBN, name) is local, making faster the loading of
-the informations. Check it out [**BookDB file**](./BookRecommender/BookRecommender/Model/BookDB.swift).
+the informations. Check it out [**BookDB file**](./BookRecommender/BookRecommender/Model/BookDB.swift).<br>
 The database is loaded when the app starts to run. See [**BookRecommenderApp file**](./BookRecommender/BookRecommender/BookRecommenderApp.swift).
 
 
