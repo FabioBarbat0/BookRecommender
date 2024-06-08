@@ -13,8 +13,8 @@ of the book are among the user’s tastes.
 ### ML Model
 The machine learning model is based on collaborative filtering and it was created by CreateML, a powerful framework
 of Apple that make easy the creation of a trained model. In fact, in this case,
-it was enough to give a small dataset. Check it out [**Dataset.csv**](./BookRecommender/BookRecommender/Dataset.csv) file.
-The model was managed with CoreML. See [**Recommender.swift**](./BookRecommender/BookRecommender/ViewModel/Recommender.swift) file for details.
+it was enough to give a small dataset. Check it out [**Dataset file**](./BookRecommender/Dataset.csv).
+The model was managed with CoreML. See [**Recommender file**](./BookRecommender/BookRecommender/ViewModel/Recommender.swift) for details.
 
 ### Google Books API
 To have the description of a book and (if it’s available) its preview, it was used Google Books API. With public searches it's not even need an API key.
@@ -25,8 +25,8 @@ The function ```loadData(isbn: String)``` will send the request to Google Books'
 ### Database
 Since the dataset is small, the database containing the books informations
 (link of the cover image, ISBN, name) is local, making faster the loading of
-the informations. Check it out [**BookDB.swift**](./BookRecommender/BookRecommender/Model/BookDB.swift) file.
-The database is loaded when the app starts to run. See [**BookRecommenderApp.swift**](./BookRecommender/BookRecommender/Views/BookRecommenderApp.swift) file.
+the informations. Check it out [**BookDB file**](./BookRecommender/BookRecommender/Model/BookDB.swift).
+The database is loaded when the app starts to run. See [**BookRecommenderApp file**](./BookRecommender/BookRecommender/BookRecommenderApp.swift).
 
 
 ## License
