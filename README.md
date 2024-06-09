@@ -14,6 +14,8 @@ of the book are among the user’s tastes.
 3. Read the description and tap *Preview*;
 4. Enjoy your reading!
 
+Click [here](https://fabiobarbat0.github.io/assets/BR_demo.mp4) to watch the demo.
+
 ## Description
 
 ### ML Model
