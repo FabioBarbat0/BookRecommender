@@ -29,6 +29,14 @@ the informations. Check it out [**BookDB file**](./BookRecommender/BookRecommend
 The database is loaded when the app starts to run. See [**BookRecommenderApp file**](./BookRecommender/BookRecommender/BookRecommenderApp.swift).
 
 
+## How it works
+1. The first view is [**BookRatingView**](./BookRecommender/BookRecommender/Views/BookRatingView.swift) which loads books from database and shows them through a ```LazyVGrid``` in which each grid item is a [**BookView**](./BookRecommender/BookRecommender/Views/BookView.swift). The view instantiates a **Recommender** object. Once rated, when the button *Continue* is pressed, the Recommender's function ```load``` is called and every rating is taken and processed;
+2. The next view is [**RecommendView**](./BookRecommender/BookRecommender/Views/RecommendView.swift) that shows recommended books by the ML model. Each grid item is a **BookView** with the boolean condition ```isRated=true``` so that the same view can be reused: rating stars are hidden and each book can be tapped to go to the next view;
+3. When a recommended book is tapped, it appears [**BookDescriptionView**](./BookRecommender/BookRecommender/Views/BookDescriptionView.swift). In this view is possible to see the description of the tapped book and its preview, loaded from the function ```loadData(isbn: String)```.
+4. Once pressed the button *Preview*, the app redirects to the book preview web page offered by Google Books;
+5. Enjoy your reading!
+
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
