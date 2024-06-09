@@ -8,6 +8,12 @@ through a trained machine learning model;
 their preview, so that they can easily understand if the plot and the style
 of the book are among the user’s tastes.
 
+## How to use
+1. Rate the books you have read and tap *Continue*;
+2. Select one of the recommended books;
+3. Read the description and tap *Preview*;
+4. Enjoy your reading!
+
 ## Description
 
 ### ML Model
@@ -34,7 +40,6 @@ The database is loaded when the app starts to run. See [**BookRecommenderApp fil
 2. The next view is [**RecommendView**](./BookRecommender/BookRecommender/Views/RecommendView.swift) that shows recommended books by the ML model. Each grid item is a **BookView** with the boolean condition ```isRated=true``` so that the same view can be reused: rating stars are hidden and each book can be tapped to go to the next view;
 3. When a recommended book is tapped, it appears [**BookDescriptionView**](./BookRecommender/BookRecommender/Views/BookDescriptionView.swift). In this view is possible to see the description of the tapped book and its preview, loaded from the function ```loadData(isbn: String)```.
 4. Once pressed the button *Preview*, the app redirects to the book preview web page offered by Google Books;
-5. Enjoy your reading!
 
 
 ## License
